@@ -1,0 +1,14 @@
+ErrorDocument 404 /404.html
+
+RewriteEngine on
+
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteRule ^ - [L]
+
+
+RewriteCond %{REQUEST_URI} ^/api/
+RewriteRule ^ bootstrap.php [L]
+
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html

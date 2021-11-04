@@ -1,0 +1,10 @@
+_next
+fonts
+images
+vendor
+*.html
+*.ico
+*.svg
+.env
+*.log
+.idea
